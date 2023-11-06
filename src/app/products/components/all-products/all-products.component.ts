@@ -9,6 +9,7 @@ import { ProductsService } from '../../services/products.service';
 export class AllProductsComponent implements OnInit {
   products: any[] = [];
   categories: any[] = [];
+  loading: boolean = false;
 
   constructor(private service: ProductsService) {}
 
@@ -18,28 +19,52 @@ export class AllProductsComponent implements OnInit {
   }
 
   getProducts() {
-    this.service.getAllProducts().subscribe((res: any) => {
-      console.log(res); // Add error handling here
-      this.products = res;
-    });
+    this.loading = true;
+    this.service.getAllProducts().subscribe(
+      (res: any) => {
+        console.log(res);
+        this.products = res;
+        this.loading = false;
+      },
+      (error: any) => {
+        console.error('Error fetching products:', error);
+        this.loading = false;
+      }
+    );
   }
 
   getCategories() {
-    this.service.getAllCategories().subscribe((res: any) => {
-      console.log(res); // Add error handling here
-      this.categories = res;
-    });
+    this.loading = true;
+    this.service.getAllCategories().subscribe(
+      (res: any) => {
+        console.log(res);
+        this.categories = res;
+        this.loading = false;
+      },
+      (error: any) => {
+        console.error('Error fetching categories:', error);
+        this.loading = false;
+      }
+    );
   }
 
-  filtreCategory(event:any){
+  filterCategory(event: any) {
     let value = event.target.value;
-    value === "All" ?this.getProducts():
-    this.getProductsCategory(value)
+    value === 'All' ? this.getProducts() : this.getProductsCategory(value);
   }
 
-  getProductsCategory(keyword:string){
-    this.service.getProductByCategory(keyword).subscribe((res:any) => this.products=res)
+  getProductsCategory(keyword: string) {
+    this.loading = true;
+    this.service.getProductByCategory(keyword).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.products = res;
+        this.loading = false;
+      },
+      (error: any) => {
+        console.error('Error fetching products by category:', error);
+        this.loading = false;
+      }
+    );
   }
-
 }
-
