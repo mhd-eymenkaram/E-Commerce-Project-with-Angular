@@ -7,24 +7,24 @@ import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AllProductsComponent } from './products/components/all-products/all-products.component';
+import { ProductsModule } from "./products/products.module";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AllProductsComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedModule,
-    HttpClientModule,
-    CommonModule,
-    FormsModule,
-    
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AllProductsComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SharedModule,
+        HttpClientModule,
+        CommonModule,
+        FormsModule,
+        ProductsModule
+    ]
 })
 export class AppModule { }
