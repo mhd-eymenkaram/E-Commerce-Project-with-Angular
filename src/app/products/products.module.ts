@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsDetialsComponent } from './components/products-detials/products-detials.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProductComponent } from './components/product/product.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +14,8 @@ import { ProductComponent } from './components/product/product.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   exports:[
     ProductComponent

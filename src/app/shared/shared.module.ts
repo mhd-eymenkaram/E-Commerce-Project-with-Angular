@@ -27,6 +27,7 @@ import { SelectComponent } from './components/select/select.component';
     HeaderComponent,
     SpinnerComponent,
     SelectComponent,
+    FormsModule
   ]
 })
 export class SharedModule { }
