@@ -4,6 +4,7 @@ import { ProductsDetialsComponent } from './components/products-detials/products
 import { BrowserModule } from '@angular/platform-browser';
 import { ProductComponent } from './components/product/product.component';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     BrowserModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports:[
     ProductComponent
