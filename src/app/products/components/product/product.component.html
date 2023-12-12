@@ -9,8 +9,8 @@
     <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
         <button class="btn btn-success" *ngIf="!addButton" (click)="addButton=true">Add to Cart</button>
         <div class="d-flex" *ngIf="addButton">
-            <input type="number" class="form-control m-1 w-50" [(ngModel)]="amount">
-            <button class="btn btn-danger" (click)="add()">Add</button>
+            <input type="number" class="form-control m-1 w-50" min="1" [(ngModel)]="amount">
+            <button class="btn btn-danger" (click)="add();addButton=false" >Add</button>
         </div>
         <span>{{data.price}} TL</span>
     </div>

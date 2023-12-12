@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AllProductsComponent } from './products/components/all-products/all-products.component';
 import { ProductsModule } from "./products/products.module";
+import { CartsComponent } from './carts/components/carts/carts.component';
+import { CartsModule } from './carts/carts.module';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { ProductsModule } from "./products/products.module";
         HttpClientModule,
         CommonModule,
         FormsModule,
-        ProductsModule
+        ProductsModule,
+        CartsModule,
+        
     ]
 })
 export class AppModule { }

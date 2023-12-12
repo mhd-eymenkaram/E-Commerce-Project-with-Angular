@@ -1,0 +1,83 @@
+/* Style for the shopping cart container */
+.cartBox {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for the shopping cart header */
+.text-danger {
+    color: red;
+}
+
+.headCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+/* Style for the quantity buttons */
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity .btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Style for the order button */
+.btn-success {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the success alert */
+.alert-success {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+.img{
+    
+}
